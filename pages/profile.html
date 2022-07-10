@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <!-- Iconscout -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Universal Css -->
+    <link rel="stylesheet" href="/universal.css">
+
+    <title>iWallet - Dashboard</title>
+</head>
+<style>
+    .active {
+        border-bottom: 2px solid;
+        font-weight: bold;
+        background-color: none !important;
+    }
+
+    a {
+        color: #232858 !important;
+        text-decoration: none;
+    }
+
+    p {
+        border-bottom: 1px solid #232858;
+        color: #232858 !important;
+    }
+
+    a:hover {
+        font-weight: bold;
+        color: #232858;
+    }
+
+    .disable {
+        cursor: no-drop !important;
+        font-weight: normal !important;
+    }
+
+    .bg {
+        position: absolute;
+        z-index: 1;
+    }
+
+    .info {
+        position: relative;
+        z-index: 10;
+    }
+
+    .info1 {
+        background-color: white;
+    }
+</style>
+
+<body>
+    <!-- For loader Animation-->
+    <!-- <div class="loader_bg">
+        <div class="loader"></div>
+    </div> -->
+    <!-- Script for loader -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/universal.js"></script>
+
+    <nav class="navbar navbar-expand-lg shadow fixed-top">
+        <div class="container px-md-0">
+            <a class="navbar-brand fw-bold logo fs-3" href="#">iWallet.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav  ">
+                    <li class="nav-item me-md-4">
+                        <a class="nav-link" href="/pages/dashboard.html"><i class="uil uil-apps"></i> Overview</a>
+                    </li>
+                    <li class="nav-item me-md-4">
+                        <a class="nav-link disable" href="#"><i class="uil uil-chart-pie-alt"></i> Budget</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="uil uil-user-circle"></i> Profile</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav" onclick="logOut()">
+                <a class="nav-link" aria-current="page" href="#"><i class="uil uil-power"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid bg"
+        style=" height: 40vh; background-image: url(/img/bg\ \(2\).jpg); background-size: cover; background-repeat: no-repeat;">
+    </div>
+    <div class="container-fluid py-5 mt-5 info">
+        <div class="container">
+            <div class="row gap-5 mt-5 py-5 d-flex justify-content-center">
+                <div class="col-md-3 info1 text-center justify-content-center d-flex flex-column py-5 shadow">
+                    <div class="col-6 text-center mx-auto">
+                        <i class="uil uil-user-circle display-1"></i>
+                    </div>
+                    <div class="px-md-2 pt-5">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6 info1 shadow">
+                    <form class="row g-3 px-md-2 py-5">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Full Name</label>
+                            <p class="p-2 border" id="userName"></p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">DOB</label>
+                            <p class="p-2 border" id="userAge">- - -</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <p class="p-2 border" id="userEmail"></p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <p class="p-2 border" id="userPassword"></p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <p class="p-2 border" id="userAddress"></p>
+                        </div>
+                        <!-- <div class="col-md-6">
+                            <label for="inputCity" class="form-label">City</label>
+                            <p class="lead fw-bold" id="userCity"></p>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">State</label>
+                            <p class="lead fw-bold" id="userState"></p>
+                        </div> -->
+                        <!-- <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Check me out
+                                </label>
+                            </div>
+                        </div> -->
+                        <!-- <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/pages/profile.js"></script>
+</body>
+
+</html>

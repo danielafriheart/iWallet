@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <!-- Iconscout -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Universal Css -->
+    <link rel="stylesheet" href="/universal.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/iLogo.png">
+
+    <title>iWallet - SignIn</title>
+</head>
+
+<style>
+    input {
+        border: none !important;
+        border-bottom: 2px solid #eee !important;
+    }
+
+    select {
+        border: none !important;
+        border-bottom: 2px solid #eee !important;
+    }
+
+    a {
+        color: #232858;
+        text-decoration: none;
+    }
+
+    a:hover {
+        font-weight: bold;
+        color: #232858;
+    }
+
+    .btn-outline {
+        border-color: #232858;
+        color: #232858;
+    }
+
+    .btn-outline:hover {
+        border-color: #232858;
+        color: #232858;
+    }
+</style>
+
+<body>
+    <!-- For loader Animation-->
+    <div class="loader_bg fixed-top">
+        <div class="loader"></div>
+    </div>
+    <!-- Script for loader -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/universal.js"></script>
+
+    <nav class="navbar navbar-expand-lg shadow fixed-top">
+        <div class="container px-md-0 ">
+            <a class="navbar-brand fw-bold logo fs-3" href="/index.html">iWallet.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav  ">
+                    <li class="nav-item me-md-4">
+                        <a class="nav-link btn-outline btn px-5" href="/pages/signup.html">Open an account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid align-items-center d-flex py-5 mt-5 mt-md-4" style="height: 91vh;">
+        <div class="container">
+            <div class=" row mx-auto d-flex flex-md-row flex-column-reverse">
+                <div class="col-md-6 align-items-center d-flex">
+                    <form class="row g-3 p-md-5">
+                        <div class="rounded p-3 col-md-10 border justify-content-center align-items-center d-flex mb-3"
+                            style="background-color: #F5F5FF; color: #232858;">
+                            <p>Please, check your browser’s address bar to be sure you’re on https://app.iWallet.com</p>
+                        </div>
+                        <h3 class="fw-bold mb-3" style="color: #232858;">Sign In to iWallet.</h3>
+                        <div class="col-md-10">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="mail" placeholder="example@email.com" required>
+                        </div>
+                        <div class="col-md-10">
+                            <label for="inputEmail4" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="pass" placeholder="*****" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-check-label" for="gridCheck">
+                                Don't own an Account? <a href="/pages/signup.html">Sign Up</a>
+                            </label>
+                        </div>
+                        <div class="col-12 ps-md-0">
+                            <a href="#" type=""
+                            class="btn mainBtn  mt-3 mt-md-0 ms-md-3 px-4 py-3 py-md-2 col-md-4 col-12"  onclick="login()">Sign
+                            In</a>
+                          
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 align-items-center pt-5 mt-5 pt-md-0 mt-md-0">
+                    <img src="/img/characte.png" alt="" class="img-fluid w-100">
+                    <div class="container text-end fixed-bottom d-none d-md-block">
+                        <p class=" text-muted">&copy Designed by <a href="https://www.linkedin.com/in/daniel-esuola/"
+                                target="_blank">Esuola Daniel</a> - 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="/pages/signin.js"></script>
+</body>
+
+</html>
