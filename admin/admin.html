@@ -72,20 +72,20 @@
             <form class="row g-4 col-md-11 mx-auto">
                 <div class="col-md-6">
                     <label for="validationDefault01" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="validationDefault01" placeholder="Daniel" required>
+                    <input type="text" class="form-control" id="fName" placeholder="Daniel" required>
                 </div>
                 <div class="col-md-6">
                     <label for="validationDefault02" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="validationDefault02" placeholder="Afriheart" required>
+                    <input type="text" class="form-control" id="lName" placeholder="Afriheart" required>
                 </div>
       
                 <div class="col-md-6">
                     <label for="validationDefault03" class="form-label">City</label>
-                    <input type="text" class="form-control" id="validationDefault03" required>
+                    <input type="text" class="form-control" id="city" required>
                 </div>
                 <div class="col-md-3">
                     <label for="validationDefault04" class="form-label">State</label>
-                    <select class="form-select" id="validationDefault04" required>
+                    <select class="form-select" id="state" required>
                         <option selected disabled value="">Choose...</option>
                         <option>...</option>
                         <option>Lagos</option>
@@ -94,13 +94,13 @@
                 </div>
                 <div class="col-md-3">
                     <label for="validationDefault05" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="validationDefault05" required>
+                    <input type="text" class="form-control" id="zipCode" required>
                 </div>
                 <div class="col-12">
                     <label for="validationDefaultUsername" class="form-label">Username</label>
                     <div class="input-group">
                         <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                        <input type="text" class="form-control" id="validationDefaultUsername"
+                        <input type="text" class="form-control" id="userName"
                             placeholder="DanielAfriheart" aria-describedby="inputGroupPrepend2" required>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                     <label for="validationDefaultUsername" class="form-label">Password</label>
                     <div class="input-group">
                         <span class="input-group-text" id="inputGroupPrepend2">🔐</span>
-                        <input type="password" class="form-control" id="validationDefaultUsername"
+                        <input type="password" class="form-control" id="password"
                             placeholder="*****" aria-describedby="inputGroupPrepend2" required>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <button class="btn btn-primary w-100 mainBtn" type="submit">Join As Admin</button>
+                    <button class="btn btn-primary w-100 mainBtn" type="submit" onclick="createNewAdmin()">Join As Admin</button>
                 </div>
             </form>
         </div>
@@ -146,6 +146,7 @@
             </ul>
         </footer>
     </div>
+    <script src="/admin/admin.js"></script>
 </body>
 
 </html>
