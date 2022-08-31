@@ -1,4 +1,4 @@
-let allAdmin = [];
+let allAdmin;
 createNewAdmin = () => {
     // alert('hellooooo')
     let newAdminAsset = {
@@ -9,9 +9,19 @@ createNewAdmin = () => {
         adminState: state.value,
         adminZip: zipCode.value,
         adminLocation: city.value + state.value + ", " + zipCode.value,
-        adminUserNAme: userName.value,
+        adminEmail: mail.value,
+        adminUserName: userName.value,
         adminPassword: password.value
     }
-    allAdmin.push(newAdminAsset)
-    console.log(allAdmin);
+    // allAdmin.push(newAdminAsset)
+    // console.log(allAdmin);
+    let allAdmin = JSON.parse(localStorage.getItem('registeredAdminList'));
+    if (newAdminAsset) {
+        if (!localStorage.getItem('registeredAdminList')) {
+            allAdmin = [];
+        } else {
+            allAdmin
+        }
+    }
+
 }
