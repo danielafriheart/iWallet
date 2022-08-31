@@ -21,16 +21,13 @@
     <!-- Animate on scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Universal Css -->
-    <!-- <link rel="stylesheet" href="/universal.css"> -->
+    <link rel="stylesheet" href="/admin/admin.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/img/iLogo.png">
 
     <title>iWallet - MyAdmin</title>
 </head>
 <style>
-    /* *{
-        outline: 1px solid silver;   
-    } */
     a {
         color: #232858;
         text-decoration: none;
@@ -45,7 +42,7 @@
     }
 </style>
 
-<body>
+<body style="height: 100vh;" class="bg-light">
     <nav class="navbar navbar-expand-lg  fixed-top">
         <div class="container px-md-0">
             <a class="navbar-brand fw-bold logo fs-3" href="#">MyAdmin.</a>
@@ -66,29 +63,22 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 90vh;">
-        <div class="container">
+    <div class="container-fluid d-flex justify-content-center align-items-center mt-4" style="height: 90vh;">
+        <div class="container col-md-5 py-5 mt-5 shadow-sm rounded-2" style="background-color: white;">
             <div class="header text-center mb-5">
-                <img src="/img/iLogo.png" alt="" class="img-fluid col-1">
+                <!-- <img src="/img/iLogo.png" alt="" class="img-fluid col-1"> -->
                 <h1>Sign up</h1>
             </div>
-            <form class="row g-4 col-md-6 mx-auto">
+            <form class="row g-4 col-md-11 mx-auto">
                 <div class="col-md-6">
                     <label for="validationDefault01" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                    <input type="text" class="form-control" id="validationDefault01" placeholder="Daniel" required>
                 </div>
                 <div class="col-md-6">
                     <label for="validationDefault02" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                    <input type="text" class="form-control" id="validationDefault02" placeholder="Afriheart" required>
                 </div>
-                <div class="col-12">
-                    <label for="validationDefaultUsername" class="form-label">Username</label>
-                    <div class="input-group">
-                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                        <input type="text" class="form-control" id="validationDefaultUsername"
-                            aria-describedby="inputGroupPrepend2" required>
-                    </div>
-                </div>
+      
                 <div class="col-md-6">
                     <label for="validationDefault03" class="form-label">City</label>
                     <input type="text" class="form-control" id="validationDefault03" required>
@@ -98,11 +88,29 @@
                     <select class="form-select" id="validationDefault04" required>
                         <option selected disabled value="">Choose...</option>
                         <option>...</option>
+                        <option>Lagos</option>
+                        <option>Abuja</option>
                     </select>
                 </div>
                 <div class="col-md-3">
                     <label for="validationDefault05" class="form-label">Zip</label>
                     <input type="text" class="form-control" id="validationDefault05" required>
+                </div>
+                <div class="col-12">
+                    <label for="validationDefaultUsername" class="form-label">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                        <input type="text" class="form-control" id="validationDefaultUsername"
+                            placeholder="DanielAfriheart" aria-describedby="inputGroupPrepend2" required>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="validationDefaultUsername" class="form-label">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend2">🔐</span>
+                        <input type="password" class="form-control" id="validationDefaultUsername"
+                            placeholder="*****" aria-describedby="inputGroupPrepend2" required>
+                    </div>
                 </div>
                 <div class="col-12">
                     <div class="form-check">
@@ -113,30 +121,30 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <button class="btn btn-primary w-100" type="submit">Submit form</button>
+                    <button class="btn btn-primary w-100 mainBtn" type="submit">Join As Admin</button>
                 </div>
             </form>
         </div>
     </div>
-    <div class="container-fluid fixed-bottom px-5">
+    <div class="container-fluid px-5">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top col-11 mx-auto">
             <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
-      
+
             <a href="/"
-              class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-              <svg class="bi me-2" width="40" height="32">
-                <use xlink:href="#bootstrap" />
-              </svg>
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
             </a>
-      
+
             <ul class="nav col-md-4 justify-content-end">
-              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
             </ul>
-          </footer>
+        </footer>
     </div>
 </body>
 
